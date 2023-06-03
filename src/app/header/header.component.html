@@ -1,4 +1,13 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="header" color="primary">
   <span>{{ appName }}</span>
   <span class="example-spacer"></span>
+  <div class="header-nav">
+    <ul class="header-nav-list">
+      <li class="header-nav-item" *ngFor="let item of list">
+        <button mat-button [routerLink]="item.link">
+          {{ item.name }}
+        </button>
+      </li>
+    </ul>
+  </div>
 </mat-toolbar>
