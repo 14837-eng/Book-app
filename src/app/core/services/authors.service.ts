@@ -19,4 +19,10 @@ export class AuthorsService {
   getAuthors(): IAuthor[] {
     return this.authors$.getValue();
   }
+
+  getAuthorByID(id: number): IAuthor | null {
+    const authors = this.getAuthors();
+    const findedAuthor = authors.find((a: IAuthor) => a.id === id);
+    return findedAuthor ? findedAuthor : null;
+  }
 }
