@@ -20,9 +20,9 @@ export class AuthorsService {
     return this.authors$.getValue();
   }
 
-  getAuthorByID(id: number): IAuthor | null {
+  getAuthorByID(id: number): IAuthor | undefined {
     const authors = this.getAuthors();
     const findedAuthor = authors.find((a: IAuthor) => a.id === id);
-    return findedAuthor ? findedAuthor : null;
+    return findedAuthor;
   }
 }
