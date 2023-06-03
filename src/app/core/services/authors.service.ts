@@ -15,4 +15,8 @@ export class AuthorsService {
     const authors = authorsJson['authors'];
     this.authors$.next(authors);
   }
+
+  getAuthors(): IAuthor[] {
+    return this.authors$.getValue();
+  }
 }
