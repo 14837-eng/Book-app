@@ -1,0 +1,160 @@
+{
+  "authors": [
+    {
+      "name": "Von Arnim, Elizabeth",
+      "birth_year": 1866,
+      "death_year": 1941,
+      "id": 0
+    },
+    {
+      "name": "Smollett, T. (Tobias)",
+      "birth_year": 1721,
+      "death_year": 1771,
+      "id": 1
+    },
+    {
+      "name": "Fielding, Henry",
+      "birth_year": 1707,
+      "death_year": 1754,
+      "id": 2
+    },
+    {
+      "name": "Wagner, Richard",
+      "birth_year": 1813,
+      "death_year": 1883,
+      "id": 3
+    },
+    {
+      "name": "Shakespeare, William",
+      "birth_year": 1564,
+      "death_year": 1616,
+      "id": 4
+    },
+    {
+      "name": "Alcott, Louisa May",
+      "birth_year": 1832,
+      "death_year": 1888,
+      "id": 5
+    },
+    {
+      "name": "Melville, Herman",
+      "birth_year": 1819,
+      "death_year": 1891,
+      "id": 6
+    },
+    {
+      "name": "Eliot, George",
+      "birth_year": 1819,
+      "death_year": 1880,
+      "id": 7
+    },
+    {
+      "name": "Forster, E. M. (Edward Morgan)",
+      "birth_year": 1879,
+      "death_year": 1970,
+      "id": 8
+    },
+    {
+      "name": "Montgomery, L. M. (Lucy Maud)",
+      "birth_year": 1874,
+      "death_year": 1942,
+      "id": 9
+    },
+    {
+      "name": "Gaskell, Elizabeth Cleghorn",
+      "birth_year": 1810,
+      "death_year": 1865,
+      "id": 10
+    },
+    {
+      "name": "Dumas, Alexandre",
+      "birth_year": 1802,
+      "death_year": 1870,
+      "id": 11
+    },
+    {
+      "name": "Austen, Jane",
+      "birth_year": 1775,
+      "death_year": 1817,
+      "id": 12
+    },
+    {
+      "name": "Shelley, Mary Wollstonecraft",
+      "birth_year": 1797,
+      "death_year": 1851,
+      "id": 13
+    },
+    {
+      "name": "Rizal, José",
+      "birth_year": 1861,
+      "death_year": 1896,
+      "id": 14
+    },
+    {
+      "name": "Carroll, Lewis",
+      "birth_year": 1832,
+      "death_year": 1898,
+      "id": 15
+    },
+    {
+      "name": "Fitzgerald, F. Scott (Francis Scott)",
+      "birth_year": 1896,
+      "death_year": 1940,
+      "id": 16
+    },
+    {
+      "name": "Wilde, Oscar",
+      "birth_year": 1854,
+      "death_year": 1900,
+      "id": 17
+    },
+    {
+      "name": "Stoker, Bram",
+      "birth_year": 1847,
+      "death_year": 1912,
+      "id": 18
+    },
+    {
+      "name": "Dickens, Charles",
+      "birth_year": 1812,
+      "death_year": 1870,
+      "id": 19
+    },
+    {
+      "name": "Ibsen, Henrik",
+      "birth_year": 1828,
+      "death_year": 1906,
+      "id": 20
+    },
+    {
+      "name": "Kafka, Franz",
+      "birth_year": 1883,
+      "death_year": 1924,
+      "id": 21
+    },
+    {
+      "name": "Stevenson, Robert Louis",
+      "birth_year": 1850,
+      "death_year": 1894,
+      "id": 22
+    },
+    {
+      "name": "Gilman, Charlotte Perkins",
+      "birth_year": 1860,
+      "death_year": 1935,
+      "id": 23
+    },
+    {
+      "name": "Tolstoy, Leo, graf",
+      "birth_year": 1828,
+      "death_year": 1910,
+      "id": 24
+    },
+    {
+      "name": "Doyle, Arthur Conan",
+      "birth_year": 1859,
+      "death_year": 1930,
+      "id": 25
+    }
+  ]
+}
