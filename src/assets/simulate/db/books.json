@@ -5,9 +5,7 @@
       "title": "The Enchanted April",
       "authors": [
         {
-          "name": "Von Arnim, Elizabeth",
-          "birth_year": 1866,
-          "death_year": 1941
+          "id": 0
         }
       ],
       "translators": [],
@@ -39,9 +37,7 @@
       "title": "The Adventures of Ferdinand Count Fathom — Complete",
       "authors": [
         {
-          "name": "Smollett, T. (Tobias)",
-          "birth_year": 1721,
-          "death_year": 1771
+          "id": 1
         }
       ],
       "translators": [],
@@ -67,9 +63,7 @@
       "title": "The Adventures of Roderick Random",
       "authors": [
         {
-          "name": "Smollett, T. (Tobias)",
-          "birth_year": 1721,
-          "death_year": 1771
+          "id": 1
         }
       ],
       "translators": [],
@@ -103,9 +97,7 @@
       "title": "History of Tom Jones, a Foundling",
       "authors": [
         {
-          "name": "Fielding, Henry",
-          "birth_year": 1707,
-          "death_year": 1754
+          "id": 2
         }
       ],
       "translators": [],
@@ -144,9 +136,7 @@
       "title": "My Life — Volume 1",
       "authors": [
         {
-          "name": "Wagner, Richard",
-          "birth_year": 1813,
-          "death_year": 1883
+          "id": 3
         }
       ],
       "translators": [],
@@ -175,9 +165,7 @@
       "title": "Romeo and Juliet",
       "authors": [
         {
-          "name": "Shakespeare, William",
-          "birth_year": 1564,
-          "death_year": 1616
+          "id": 4
         }
       ],
       "translators": [],
@@ -211,9 +199,7 @@
       "title": "Little Women; Or, Meg, Jo, Beth, and Amy",
       "authors": [
         {
-          "name": "Alcott, Louisa May",
-          "birth_year": 1832,
-          "death_year": 1888
+          "id": 5
         }
       ],
       "translators": [],
@@ -249,9 +235,7 @@
       "title": "Moby Dick; Or, The Whale",
       "authors": [
         {
-          "name": "Melville, Herman",
-          "birth_year": 1819,
-          "death_year": 1891
+          "id": 6
         }
       ],
       "translators": [],
@@ -286,9 +270,7 @@
       "title": "Middlemarch",
       "authors": [
         {
-          "name": "Eliot, George",
-          "birth_year": 1819,
-          "death_year": 1880
+          "id": 7
         }
       ],
       "translators": [],
@@ -323,9 +305,7 @@
       "title": "A Room with a View",
       "authors": [
         {
-          "name": "Forster, E. M. (Edward Morgan)",
-          "birth_year": 1879,
-          "death_year": 1970
+          "id": 8
         }
       ],
       "translators": [],
@@ -357,9 +337,7 @@
       "title": "The Blue Castle: a novel",
       "authors": [
         {
-          "name": "Montgomery, L. M. (Lucy Maud)",
-          "birth_year": 1874,
-          "death_year": 1942
+          "id": 9
         }
       ],
       "translators": [],
@@ -393,9 +371,7 @@
       "title": "The Complete Works of William Shakespeare",
       "authors": [
         {
-          "name": "Shakespeare, William",
-          "birth_year": 1564,
-          "death_year": 1616
+          "id": 4
         }
       ],
       "translators": [],
@@ -421,9 +397,7 @@
       "title": "Cranford",
       "authors": [
         {
-          "name": "Gaskell, Elizabeth Cleghorn",
-          "birth_year": 1810,
-          "death_year": 1865
+          "id": 10
         }
       ],
       "translators": [],
@@ -456,9 +430,7 @@
       "title": "The Expedition of Humphry Clinker",
       "authors": [
         {
-          "name": "Smollett, T. (Tobias)",
-          "birth_year": 1721,
-          "death_year": 1771
+          "id": 1
         }
       ],
       "translators": [],
@@ -488,9 +460,7 @@
       "title": "Twenty Years After",
       "authors": [
         {
-          "name": "Dumas, Alexandre",
-          "birth_year": 1802,
-          "death_year": 1870
+          "id": 11
         }
       ],
       "translators": [],
@@ -516,9 +486,7 @@
       "title": "Pride and Prejudice",
       "authors": [
         {
-          "name": "Austen, Jane",
-          "birth_year": 1775,
-          "death_year": 1817
+          "id": 12
         }
       ],
       "translators": [],
@@ -552,9 +520,7 @@
       "title": "Frankenstein; Or, The Modern Prometheus",
       "authors": [
         {
-          "name": "Shelley, Mary Wollstonecraft",
-          "birth_year": 1797,
-          "death_year": 1851
+          "id": 13
         }
       ],
       "translators": [],
@@ -593,9 +559,7 @@
       "title": "Noli Me Tangere",
       "authors": [
         {
-          "name": "Rizal, José",
-          "birth_year": 1861,
-          "death_year": 1896
+          "id": 14
         }
       ],
       "translators": [
@@ -630,9 +594,7 @@
       "title": "Alice's Adventures in Wonderland",
       "authors": [
         {
-          "name": "Carroll, Lewis",
-          "birth_year": 1832,
-          "death_year": 1898
+          "id": 15
         }
       ],
       "translators": [],
@@ -663,9 +625,7 @@
       "title": "Ang \"Filibusterismo\" (Karugtóng ng Noli Me Tangere)",
       "authors": [
         {
-          "name": "Rizal, José",
-          "birth_year": 1861,
-          "death_year": 1896
+          "id": 14
         }
       ],
       "translators": [
@@ -700,9 +660,7 @@
       "title": "The Great Gatsby",
       "authors": [
         {
-          "name": "Fitzgerald, F. Scott (Francis Scott)",
-          "birth_year": 1896,
-          "death_year": 1940
+          "id": 16
         }
       ],
       "translators": [],
@@ -734,9 +692,7 @@
       "title": "The Picture of Dorian Gray",
       "authors": [
         {
-          "name": "Wilde, Oscar",
-          "birth_year": 1854,
-          "death_year": 1900
+          "id": 17
         }
       ],
       "translators": [],
@@ -771,9 +727,7 @@
       "title": "The Importance of Being Earnest: A Trivial Comedy for Serious People",
       "authors": [
         {
-          "name": "Wilde, Oscar",
-          "birth_year": 1854,
-          "death_year": 1900
+          "id": 17
         }
       ],
       "translators": [],
@@ -802,9 +756,7 @@
       "title": "Dracula",
       "authors": [
         {
-          "name": "Stoker, Bram",
-          "birth_year": 1847,
-          "death_year": 1912
+          "id": 18
         }
       ],
       "translators": [],
@@ -843,9 +795,7 @@
       "title": "A Tale of Two Cities",
       "authors": [
         {
-          "name": "Dickens, Charles",
-          "birth_year": 1812,
-          "death_year": 1870
+          "id": 19
         }
       ],
       "translators": [],
@@ -880,9 +830,7 @@
       "title": "A Doll's House : a play",
       "authors": [
         {
-          "name": "Ibsen, Henrik",
-          "birth_year": 1828,
-          "death_year": 1906
+          "id": 20
         }
       ],
       "translators": [],
@@ -913,9 +861,7 @@
       "title": "Metamorphosis",
       "authors": [
         {
-          "name": "Kafka, Franz",
-          "birth_year": 1883,
-          "death_year": 1924
+          "id": 21
         }
       ],
       "translators": [
@@ -946,9 +892,7 @@
       "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
       "authors": [
         {
-          "name": "Stevenson, Robert Louis",
-          "birth_year": 1850,
-          "death_year": 1894
+          "id": 22
         }
       ],
       "translators": [],
@@ -982,9 +926,7 @@
       "title": "Great Expectations",
       "authors": [
         {
-          "name": "Dickens, Charles",
-          "birth_year": 1812,
-          "death_year": 1870
+          "id": 19
         }
       ],
       "translators": [],
@@ -1018,9 +960,7 @@
       "title": "The Yellow Wallpaper",
       "authors": [
         {
-          "name": "Gilman, Charlotte Perkins",
-          "birth_year": 1860,
-          "death_year": 1935
+          "id": 23
         }
       ],
       "translators": [],
@@ -1051,9 +991,7 @@
       "title": "War and Peace",
       "authors": [
         {
-          "name": "Tolstoy, Leo, graf",
-          "birth_year": 1828,
-          "death_year": 1910
+          "id": 24
         }
       ],
       "translators": [
@@ -1102,9 +1040,7 @@
       "title": "The Adventures of Sherlock Holmes",
       "authors": [
         {
-          "name": "Doyle, Arthur Conan",
-          "birth_year": 1859,
-          "death_year": 1930
+          "id": 25
         }
       ],
       "translators": [],
