@@ -1,0 +1,19 @@
+<mat-card class="filter-panel">
+  <mat-card-header> Filter Panel</mat-card-header>
+  <mat-card-content>
+    <!-- Languages -->
+    <div class="filter-panel-container">
+      <mat-form-field>
+        <mat-label>Languages</mat-label>
+        <mat-select (valueChange)="changeLang($event)">
+          <mat-option (click)="changeLang('')">Отменить</mat-option>
+          <mat-option
+            *ngFor="let langauge of languages"
+            [value]="langauge.name"
+            >{{ langauge.name }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+</mat-card>
