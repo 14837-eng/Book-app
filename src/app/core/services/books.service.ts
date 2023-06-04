@@ -51,6 +51,10 @@ export class BooksService {
     this.filters.author_id = author_id;
   }
 
+  setGenreFilter(gentre: string) {
+    this.filters.shelve = gentre;
+  }
+
   getFilters() {
     return this.filters;
   }
@@ -77,14 +81,23 @@ export class BooksService {
       return !!success;
     });
   }
+  private filterByGenre(books: IBook[], genre: string) {
+    return books.filter((book) => {
+      const success = book.bookshelves.find((e) => e === genre);
+      return !!success;
+    });
+  }
 
   private getBooksIncludingFilters(books: IBook[]) {
-    const { search, language, author_id } = this.filters;
+    const { search, language, author_id, shelve } = this.filters;
     if (search.length) {
       books = this.searchByTitleAndSubtitle(books, search);
     }
     if (language.length) {
       books = this.filterByLang(books, language);
+    }
+    if (shelve.length) {
+      books = this.filterByGenre(books, shelve);
     }
     if (author_id !== INVALID_ID) {
       books = this.filterByAuthor(books, author_id);

@@ -1,6 +1,21 @@
 <mat-card class="filter-panel">
   <mat-card-header> Filter Panel</mat-card-header>
   <mat-card-content>
+    <!-- Genres -->
+    <div class="filter-panel-container">
+      <mat-form-field>
+        <mat-label>Genres</mat-label>
+        <mat-select
+          (valueChange)="changeGenre($event)"
+          [value]="filters.shelve"
+        >
+          <mat-option (click)="changeGenre('')">Отменить</mat-option>
+          <mat-option *ngFor="let genre of genres" [value]="genre">{{
+            genre
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
     <!-- Authors -->
     <div class="filter-panel-container">
       <mat-form-field>
