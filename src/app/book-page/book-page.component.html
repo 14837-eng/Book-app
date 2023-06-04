@@ -1,1 +1,8 @@
-<p>book-page works!</p>
+<div class="book-page">
+  <div class="book-page-nav">
+    <button mat-raised-button color="primary" routerLink="/">back</button>
+  </div>
+  <div class="book-page-content">
+    <app-book-item [book]="$any(book$ | async)"></app-book-item>
+  </div>
+</div>
