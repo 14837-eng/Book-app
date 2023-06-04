@@ -30,7 +30,8 @@
         "text/plain": "https://www.gutenberg.org/ebooks/16389.txt.utf-8",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/16389.rdf"
       },
-      "download_count": 118812
+      "download_count": 118812,
+      "number_of_pages": 63
     },
     {
       "id": 6761,
@@ -56,7 +57,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/6761.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/6761.rdf"
       },
-      "download_count": 113474
+      "download_count": 113474,
+      "number_of_pages": 68
     },
     {
       "id": 4085,
@@ -90,7 +92,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/4085.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/4085.rdf"
       },
-      "download_count": 110589
+      "download_count": 110589,
+      "number_of_pages": 78
     },
     {
       "id": 6593,
@@ -129,7 +132,8 @@
         "text/plain; charset=iso-8859-1": "https://www.gutenberg.org/files/6593/6593-8.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/6593.rdf"
       },
-      "download_count": 107360
+      "download_count": 107360,
+      "number_of_pages": 96
     },
     {
       "id": 5197,
@@ -158,7 +162,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/5197.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/5197.rdf"
       },
-      "download_count": 104045
+      "download_count": 104045,
+      "number_of_pages": 58
     },
     {
       "id": 1513,
@@ -192,7 +197,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/1513/1513-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/1513.rdf"
       },
-      "download_count": 103473
+      "download_count": 103473,
+      "number_of_pages": 75
     },
     {
       "id": 37106,
@@ -228,7 +234,8 @@
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/37106.rdf",
         "text/plain": "https://www.gutenberg.org/ebooks/37106.txt.utf-8"
       },
-      "download_count": 98681
+      "download_count": 98681,
+      "number_of_pages": 60
     },
     {
       "id": 2701,
@@ -263,7 +270,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/2701.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/2701.rdf"
       },
-      "download_count": 89184
+      "download_count": 89184,
+      "number_of_pages": 54
     },
     {
       "id": 145,
@@ -298,7 +306,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/145/145-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/145.rdf"
       },
-      "download_count": 85099
+      "download_count": 85099,
+      "number_of_pages": 51
     },
     {
       "id": 2641,
@@ -330,7 +339,8 @@
         "image/jpeg": "https://www.gutenberg.org/cache/epub/2641/pg2641.cover.medium.jpg",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/2641.rdf"
       },
-      "download_count": 84883
+      "download_count": 84883,
+      "number_of_pages": 85
     },
     {
       "id": 67979,
@@ -364,7 +374,8 @@
         "text/plain": "https://www.gutenberg.org/ebooks/67979.txt.utf-8",
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/67979/67979-0.txt"
       },
-      "download_count": 79674
+      "download_count": 79674,
+      "number_of_pages": 58
     },
     {
       "id": 100,
@@ -390,7 +401,8 @@
         "text/plain": "https://www.gutenberg.org/ebooks/100.txt.utf-8",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/100.rdf"
       },
-      "download_count": 77768
+      "download_count": 77768,
+      "number_of_pages": 96
     },
     {
       "id": 394,
@@ -423,7 +435,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/394/394-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/394.rdf"
       },
-      "download_count": 73181
+      "download_count": 73181,
+      "number_of_pages": 81
     },
     {
       "id": 2160,
@@ -453,7 +466,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/2160.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/2160.rdf"
       },
-      "download_count": 70116
+      "download_count": 70116,
+      "number_of_pages": 50
     },
     {
       "id": 1259,
@@ -479,7 +493,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/1259/1259-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/1259.rdf"
       },
-      "download_count": 66851
+      "download_count": 66851,
+      "number_of_pages": 51
     },
     {
       "id": 1342,
@@ -513,7 +528,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/1342.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/1342.rdf"
       },
-      "download_count": 54342
+      "download_count": 54342,
+      "number_of_pages": 66
     },
     {
       "id": 84,
@@ -552,7 +568,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/84.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/84.rdf"
       },
-      "download_count": 52847
+      "download_count": 52847,
+      "number_of_pages": 68
     },
     {
       "id": 20228,
@@ -587,7 +604,8 @@
         "text/plain": "https://www.gutenberg.org/ebooks/20228.txt.utf-8",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/20228.rdf"
       },
-      "download_count": 31495
+      "download_count": 31495,
+      "number_of_pages": 91
     },
     {
       "id": 11,
@@ -618,7 +636,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/11.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/11.rdf"
       },
-      "download_count": 30323
+      "download_count": 30323,
+      "number_of_pages": 62
     },
     {
       "id": 47629,
@@ -653,7 +672,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/47629.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/47629.rdf"
       },
-      "download_count": 28489
+      "download_count": 28489,
+      "number_of_pages": 78
     },
     {
       "id": 64317,
@@ -685,7 +705,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/64317/64317-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/64317.rdf"
       },
-      "download_count": 28437
+      "download_count": 28437,
+      "number_of_pages": 70
     },
     {
       "id": 174,
@@ -720,7 +741,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/174/174-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/174.rdf"
       },
-      "download_count": 24019
+      "download_count": 24019,
+      "number_of_pages": 94
     },
     {
       "id": 844,
@@ -749,7 +771,8 @@
         "text/plain; charset=utf-8": "https://www.gutenberg.org/files/844/844-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/844.rdf"
       },
-      "download_count": 23230
+      "download_count": 23230,
+      "number_of_pages": 77
     },
     {
       "id": 345,
@@ -788,7 +811,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/345/345-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/345.rdf"
       },
-      "download_count": 22340
+      "download_count": 22340,
+      "number_of_pages": 65
     },
     {
       "id": 98,
@@ -823,7 +847,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/98.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/98.rdf"
       },
-      "download_count": 21298
+      "download_count": 21298,
+      "number_of_pages": 82
     },
     {
       "id": 2542,
@@ -854,7 +879,8 @@
         "image/jpeg": "https://www.gutenberg.org/cache/epub/2542/pg2542.cover.medium.jpg",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/2542.rdf"
       },
-      "download_count": 19812
+      "download_count": 19812,
+      "number_of_pages": 59
     },
     {
       "id": 5200,
@@ -885,7 +911,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/5200.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/5200.rdf"
       },
-      "download_count": 18856
+      "download_count": 18856,
+      "number_of_pages": 71
     },
     {
       "id": 43,
@@ -919,7 +946,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/43.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/43.rdf"
       },
-      "download_count": 15941
+      "download_count": 15941,
+      "number_of_pages": 92
     },
     {
       "id": 1400,
@@ -953,7 +981,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/1400.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/1400.rdf"
       },
-      "download_count": 15223
+      "download_count": 15223,
+      "number_of_pages": 62
     },
     {
       "id": 1952,
@@ -984,7 +1013,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/1952.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/1952.rdf"
       },
-      "download_count": 14835
+      "download_count": 14835,
+      "number_of_pages": 85
     },
     {
       "id": 2600,
@@ -1033,7 +1063,8 @@
         "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/2600/2600-0.txt",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/2600.rdf"
       },
-      "download_count": 14799
+      "download_count": 14799,
+      "number_of_pages": 68
     },
     {
       "id": 1661,
@@ -1066,7 +1097,8 @@
         "text/html": "https://www.gutenberg.org/ebooks/1661.html.images",
         "application/rdf+xml": "https://www.gutenberg.org/ebooks/1661.rdf"
       },
-      "download_count": 14694
+      "download_count": 14694,
+      "number_of_pages": 51
     }
   ]
 }

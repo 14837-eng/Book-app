@@ -5,6 +5,7 @@ export interface IBook {
   title: string;
   authors: IAuthor[];
   translators: any[];
+  number_of_pages: number;
   subjects: string[];
   bookshelves: string[];
   languages: string[];
