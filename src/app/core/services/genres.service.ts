@@ -13,14 +13,14 @@ export class GenresService {
 
   constructor() {
     const genres: any = genresJson['genres'];
-    this.saveLangs(genres);
+    this.saveGenres(genres);
   }
 
-  getLangs() {
+  getGenres() {
     return this.genres$.value;
   }
 
-  saveLangs(genres: string[]) {
+  saveGenres(genres: string[]) {
     this.genres$.next(genres);
   }
 }
