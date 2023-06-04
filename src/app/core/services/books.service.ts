@@ -11,10 +11,7 @@ import { AuthorsService } from './authors.service';
 export class BooksService {
   private books$: BehaviorSubject<IBook[]> = new BehaviorSubject([] as IBook[]);
 
-  constructor(private authorsService: AuthorsService) {
-    const books: any = booksJson['books'];
-    this.books$.next(books);
-  }
+  constructor(private authorsService: AuthorsService) {}
 
   setDataOfAuthorsOfBooks = (books: IBook[]) => {
     return books.map((book) => {
@@ -29,5 +26,10 @@ export class BooksService {
 
   listenBooks() {
     return this.books$.asObservable().pipe(map(this.setDataOfAuthorsOfBooks));
+  }
+
+  getBooks() {
+    const books: any = booksJson['books'];
+    this.books$.next(books);
   }
 }
