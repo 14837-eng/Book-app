@@ -1,3 +1,7 @@
 <div class="main-page">
+  <app-search
+    [placeholder]="'Поиск'"
+    (onSearch)="onSearch($event)"
+  ></app-search>
   <app-books-list></app-books-list>
 </div>
