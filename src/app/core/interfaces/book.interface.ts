@@ -3,6 +3,7 @@ import { IAuthor } from './author.interface';
 export interface IBook {
   id: number;
   title: string;
+  subtitle: string;
   authors: IAuthor[];
   translators: any[];
   number_of_pages: number;
