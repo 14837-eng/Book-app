@@ -14,3 +14,12 @@ export interface IBook {
   formats: string[];
   download_count: number;
 }
+
+export interface IBookFilter {
+  search: string;
+  author_id: number;
+  language_id: number;
+  shelve_id: number;
+  min_pages_count: number;
+  max_pages_count: number;
+}
