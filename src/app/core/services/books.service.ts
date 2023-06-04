@@ -127,7 +127,7 @@ export class BooksService {
     if (author_id !== INVALID_ID) {
       books = this.filterByAuthor(books, author_id);
     }
-    if (min_pages_count && max_pages_count) {
+    if (min_pages_count >= 0 && max_pages_count >= 0) {
       books = this.filterByCountOfPages(books);
     }
     return books;
