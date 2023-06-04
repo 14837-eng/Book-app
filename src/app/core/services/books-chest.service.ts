@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { IBook } from '../interfaces/book.interface';
 
 import booksJson from 'src/assets/simulate/db/books.json';
@@ -19,6 +19,15 @@ export class BooksChestService {
 
   getBooks() {
     return this.$booksChest.value;
+  }
+
+  getBookByID(id: number): Observable<IBook> {
+    return this.$booksChest.pipe(
+      map((books) => {
+        const book = books.find((b) => b.id === id) as IBook;
+        return book;
+      })
+    );
   }
 
   saveBooks(books: IBook[]) {
