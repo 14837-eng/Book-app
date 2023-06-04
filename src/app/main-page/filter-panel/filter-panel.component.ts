@@ -39,10 +39,19 @@ export class FilterPanelComponent implements OnInit {
     this.booksService.getBooks();
   }
 
-  changeAuthor(author_id: number) {
-    this.filters.author_id = author_id;
-    this.booksService.setAuthorFilter(author_id);
+  changeAuthor(author: IAuthor | null) {
+    if (!author) {
+      this.booksService.setAuthorFilter(-1);
+      this.filters.author_id = -1;
+    } else {
+      this.booksService.setAuthorFilter(author.id);
+      this.filters.author_id = author.id;
+    }
     this.booksService.getBooks();
+  }
+
+  getAuthorByID(author_id: number) {
+    return this.authorsService.getAuthorByID(author_id);
   }
 
   changeGenre(genre: string) {

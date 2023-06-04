@@ -20,14 +20,14 @@
     <div class="filter-panel-container">
       <mat-form-field>
         <mat-label>Authors</mat-label>
-        <mat-select
-          (valueChange)="changeAuthor($event)"
-          [value]="filters.language"
-        >
-          <mat-option (click)="changeAuthor(-1)">Отменить</mat-option>
-          <mat-option *ngFor="let author of authors" [value]="author.id">{{
-            author.name
-          }}</mat-option>
+        <mat-select [value]="getAuthorByID(filters.author_id)?.name">
+          <mat-option (click)="changeAuthor(null)">Отменить</mat-option>
+          <mat-option
+            *ngFor="let author of authors"
+            [value]="author.name"
+            (click)="changeAuthor(author)"
+            >{{ author.name }}</mat-option
+          >
         </mat-select>
       </mat-form-field>
     </div>
