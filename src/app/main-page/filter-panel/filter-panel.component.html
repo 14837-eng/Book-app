@@ -5,7 +5,10 @@
     <div class="filter-panel-container">
       <mat-form-field>
         <mat-label>Languages</mat-label>
-        <mat-select (valueChange)="changeLang($event)">
+        <mat-select
+          (valueChange)="changeLang($event)"
+          [value]="filters.language"
+        >
           <mat-option (click)="changeLang('')">Отменить</mat-option>
           <mat-option
             *ngFor="let langauge of languages"

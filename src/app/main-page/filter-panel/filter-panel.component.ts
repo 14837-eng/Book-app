@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { IBookFilter } from 'src/app/core/interfaces/book.interface';
 import { ILangugage } from 'src/app/core/interfaces/languages.interface';
 import { BooksService } from 'src/app/core/services/books.service';
 import { LanguagesService } from 'src/app/core/services/languages.service';
@@ -11,6 +12,7 @@ import { LanguagesService } from 'src/app/core/services/languages.service';
 })
 export class FilterPanelComponent implements OnInit {
   languages: ILangugage[] = [];
+  filters!: IBookFilter;
 
   constructor(
     private languagesService: LanguagesService,
@@ -18,10 +20,12 @@ export class FilterPanelComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.filters = this.booksService.getFilters();
     this.languages = this.languagesService.getLangs();
   }
 
   changeLang(event: string) {
+    this.filters.language = event;
     this.booksService.setLangFilter(event);
     this.booksService.getBooks();
   }
