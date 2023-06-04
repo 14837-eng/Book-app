@@ -21,7 +21,7 @@ export class LanguagesService {
     return this.languages$.value;
   }
 
-  saveLangs(books: ILangugage[]) {
-    this.languages$.next(books);
+  saveLangs(langs: ILangugage[]) {
+    this.languages$.next(langs);
   }
 }
