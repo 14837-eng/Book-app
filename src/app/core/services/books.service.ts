@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
+import { INVALID_ID } from '../consts/common.consts';
 import { IAuthor } from '../interfaces/author.interface';
 import { IBook } from '../interfaces/book.interface';
 import { ILangugage } from '../interfaces/languages.interface';
@@ -46,6 +47,10 @@ export class BooksService {
     this.filters.language = value;
   }
 
+  setAuthorFilter(author_id: number) {
+    this.filters.author_id = author_id;
+  }
+
   getFilters() {
     return this.filters;
   }
@@ -66,8 +71,15 @@ export class BooksService {
     });
   }
 
+  private filterByAuthor(books: IBook[], author_id: number) {
+    return books.filter((book) => {
+      const success = book.authors.find((e) => e.id === author_id);
+      return !!success;
+    });
+  }
+
   getBooks() {
-    const { search, language } = this.filters;
+    const { search, language, author_id } = this.filters;
     let books = this.booksChestService.getBooks();
 
     if (search.length) {
@@ -75,6 +87,9 @@ export class BooksService {
     }
     if (language.length) {
       books = this.filterByLang(books, language);
+    }
+    if (author_id !== INVALID_ID) {
+      books = this.filterByAuthor(books, author_id);
     }
 
     this.books$.next(books);
