@@ -55,6 +55,14 @@ export class BooksService {
     this.filters.shelve = gentre;
   }
 
+  setMinCountOfPage(count: number) {
+    this.filters.min_pages_count = count;
+  }
+
+  setMaxCountOfPage(count: number) {
+    this.filters.max_pages_count = count;
+  }
+
   getFilters() {
     return this.filters;
   }
@@ -81,6 +89,7 @@ export class BooksService {
       return !!success;
     });
   }
+
   private filterByGenre(books: IBook[], genre: string) {
     return books.filter((book) => {
       const success = book.bookshelves.find((e) => e === genre);
@@ -88,8 +97,24 @@ export class BooksService {
     });
   }
 
+  private filterByCountOfPages(books: IBook[]) {
+    return books.filter((book) => {
+      const { min_pages_count, max_pages_count } = this.filters;
+      const min_condition = book.number_of_pages >= min_pages_count;
+      const max_condition = book.number_of_pages <= max_pages_count;
+      return min_condition && max_condition;
+    });
+  }
+
   private getBooksIncludingFilters(books: IBook[]) {
-    const { search, language, author_id, shelve } = this.filters;
+    const {
+      search,
+      language,
+      author_id,
+      shelve,
+      min_pages_count,
+      max_pages_count,
+    } = this.filters;
     if (search.length) {
       books = this.searchByTitleAndSubtitle(books, search);
     }
@@ -101,6 +126,9 @@ export class BooksService {
     }
     if (author_id !== INVALID_ID) {
       books = this.filterByAuthor(books, author_id);
+    }
+    if (min_pages_count && max_pages_count) {
+      books = this.filterByCountOfPages(books);
     }
     return books;
   }

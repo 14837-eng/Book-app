@@ -48,5 +48,28 @@
         </mat-select>
       </mat-form-field>
     </div>
+    <!-- Count of pages -->
+    <div class="filter-panel-container">
+      <mat-form-field class="search-field">
+        <mat-label>min pages count</mat-label>
+        <input
+          type="text"
+          [value]="filters.min_pages_count"
+          matInput
+          (change)="onChangeMinCountOfPage($event)"
+        />
+      </mat-form-field>
+    </div>
+    <div class="filter-panel-container">
+      <mat-form-field class="search-field">
+        <mat-label>max pages count</mat-label>
+        <input
+          type="text"
+          [value]="filters.max_pages_count"
+          matInput
+          (change)="onChangeMaxCountOfPage($event)"
+        />
+      </mat-form-field>
+    </div>
   </mat-card-content>
 </mat-card>

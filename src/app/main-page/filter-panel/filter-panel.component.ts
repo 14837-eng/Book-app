@@ -59,4 +59,22 @@ export class FilterPanelComponent implements OnInit {
     this.booksService.setGenreFilter(genre);
     this.booksService.getBooks();
   }
+
+  onChangeMinCountOfPage(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = Number(target.value);
+
+    this.filters.min_pages_count = value;
+    this.booksService.setMinCountOfPage(value);
+    this.booksService.getBooks();
+  }
+
+  onChangeMaxCountOfPage(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = Number(target.value);
+
+    this.filters.max_pages_count = value;
+    this.booksService.setMaxCountOfPage(value);
+    this.booksService.getBooks();
+  }
 }
