@@ -31,7 +31,8 @@
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>View</button>
-    <button mat-button>Edit</button>
+    <ng-container *ngFor="let btn of actionBtns">
+      <button mat-button (click)="onClick(btn)">{{ btn }}</button>
+    </ng-container>
   </mat-card-actions>
 </mat-card>
