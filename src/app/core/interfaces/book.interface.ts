@@ -18,8 +18,8 @@ export interface IBook {
 export interface IBookFilter {
   search: string;
   author_id: number;
-  language_id: number;
-  shelve_id: number;
+  language: string;
+  shelve: string;
   min_pages_count: number;
   max_pages_count: number;
 }
