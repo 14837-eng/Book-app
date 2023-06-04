@@ -1,0 +1,33 @@
+<mat-card class="book" [class.mini]="mini" *ngIf="book">
+  <mat-card-header>
+    <mat-card-title>{{ book.title }}</mat-card-title>
+    <mat-card-subtitle>
+      <span class="book-shelves" *ngFor="let shelve of book.bookshelves">
+        {{ shelve }}</span
+      >
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="book-authors">
+      <h3>Authors:</h3>
+      <ul class="book-list">
+        <li class="book-item" *ngFor="let author of book.authors">
+          {{ author.name }}
+        </li>
+      </ul>
+    </div>
+    <h3>Number of pages: {{ book.number_of_pages }}</h3>
+    <div class="book-languages">
+      <h3>Languages:</h3>
+      <ul class="book-list">
+        <li class="book-item" *ngFor="let language of book.languages">
+          {{ language }}
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>View</button>
+    <button mat-button>Edit</button>
+  </mat-card-actions>
+</mat-card>
