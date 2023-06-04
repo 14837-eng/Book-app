@@ -4,5 +4,12 @@
     [placeholder]="'Поиск'"
     (onSearch)="onSearch($event)"
   ></app-search>
-  <app-books-list></app-books-list>
+  <div class="main-page-content">
+    <div class="main-page-books">
+      <app-books-list></app-books-list>
+    </div>
+    <div class="main-page-filters">
+      <app-filter-panel></app-filter-panel>
+    </div>
+  </div>
 </div>
