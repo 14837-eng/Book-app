@@ -32,6 +32,8 @@ export class BooksListComponent implements OnInit, OnDestroy {
         this.books = books;
         this.cd.markForCheck();
       });
+
+    this.booksService.getBooks();
   }
 
   ngOnDestroy(): void {
