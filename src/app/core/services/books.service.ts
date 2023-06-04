@@ -78,10 +78,8 @@ export class BooksService {
     });
   }
 
-  getBooks() {
+  private getBooksIncludingFilters(books: IBook[]) {
     const { search, language, author_id } = this.filters;
-    let books = this.booksChestService.getBooks();
-
     if (search.length) {
       books = this.searchByTitleAndSubtitle(books, search);
     }
@@ -91,6 +89,13 @@ export class BooksService {
     if (author_id !== INVALID_ID) {
       books = this.filterByAuthor(books, author_id);
     }
+    return books;
+  }
+
+  getBooks() {
+    let books = this.booksChestService.getBooks();
+
+    books = this.getBooksIncludingFilters(books);
 
     this.books$.next(books);
   }
