@@ -8,11 +8,16 @@ import { BooksService } from '../core/services/books.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainPageComponent implements OnInit {
+  search = '';
+
   constructor(private booksService: BooksService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.search = this.booksService.getSearchValue();
+  }
 
   onSearch(value: string) {
+    this.search = value;
     this.booksService.setSearch(value);
     this.booksService.getBooks();
   }
