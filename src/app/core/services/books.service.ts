@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
-import booksJson from 'src/assets/simulate/db/books.json';
 import { IAuthor } from '../interfaces/author.interface';
 import { IBook } from '../interfaces/book.interface';
 import { BookFilter } from '../models/books.model';
 import { AuthorsService } from './authors.service';
+import { BooksChestService } from './books-chest.service';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,10 @@ export class BooksService {
   private books$: BehaviorSubject<IBook[]> = new BehaviorSubject([] as IBook[]);
   private filters = new BookFilter();
 
-  constructor(private authorsService: AuthorsService) {}
+  constructor(
+    private authorsService: AuthorsService,
+    private booksChestService: BooksChestService
+  ) {}
 
   private setDataOfAuthorsOfBooks = (books: IBook[]) => {
     return books.map((book) => {
@@ -28,6 +31,10 @@ export class BooksService {
 
   listenBooks() {
     return this.books$.asObservable().pipe(map(this.setDataOfAuthorsOfBooks));
+  }
+
+  getSearchValue() {
+    return this.filters.search;
   }
 
   setSearch(value: string) {
@@ -45,9 +52,9 @@ export class BooksService {
 
   getBooks() {
     const { search } = this.filters;
-    let books: any = booksJson['books'];
+    let books = this.booksChestService.getBooks();
 
-    if (search) {
+    if (search.length) {
       books = this.searchByTitleAndSubtitle(books, search);
     }
 
