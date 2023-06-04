@@ -33,11 +33,13 @@ export class BooksService {
   setSearch(value: string) {
     this.filters.search = value;
   }
-  private searchByTitle(books: IBook[], value: string) {
+
+  private searchByTitleAndSubtitle(books: IBook[], value: string) {
     return books.filter((book) => {
       const searchValue = value.toLowerCase();
       const title = book.title.toLowerCase();
-      return title.includes(searchValue);
+      const subtitle = book.subtitle.toLowerCase();
+      return title.includes(searchValue) || subtitle.includes(searchValue);
     });
   }
 
@@ -46,7 +48,7 @@ export class BooksService {
     let books: any = booksJson['books'];
 
     if (search) {
-      books = this.searchByTitle(books, search);
+      books = this.searchByTitleAndSubtitle(books, search);
     }
 
     this.books$.next(books);
