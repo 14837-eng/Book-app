@@ -60,4 +60,8 @@ export class BooksService {
 
     this.books$.next(books);
   }
+
+  getBookByID(id: number) {
+    return this.booksChestService.getBookByID(id);
+  }
 }
