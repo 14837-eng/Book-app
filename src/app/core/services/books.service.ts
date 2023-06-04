@@ -15,7 +15,7 @@ export class BooksService {
 
   constructor(private authorsService: AuthorsService) {}
 
-  setDataOfAuthorsOfBooks = (books: IBook[]) => {
+  private setDataOfAuthorsOfBooks = (books: IBook[]) => {
     return books.map((book) => {
       if (!book.authors.length) return book;
       book.authors = book.authors.map((author: IAuthor) => {
