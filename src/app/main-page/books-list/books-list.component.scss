@@ -1,0 +1,13 @@
+$book-margin: 10px;
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - #{$book-margin * 2});
+  padding: $book-margin;
+  margin: -$book-margin;
+}
+
+.books-item {
+  margin: $book-margin;
+}
