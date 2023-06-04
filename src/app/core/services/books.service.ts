@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { IAuthor } from '../interfaces/author.interface';
 import { IBook } from '../interfaces/book.interface';
+import { ILangugage } from '../interfaces/languages.interface';
 import { BookFilter } from '../models/books.model';
 import { AuthorsService } from './authors.service';
 import { BooksChestService } from './books-chest.service';
@@ -41,6 +42,14 @@ export class BooksService {
     this.filters.search = value;
   }
 
+  setLangFilter(value: string) {
+    this.filters.language = value;
+  }
+
+  getFilters() {
+    return this.filters;
+  }
+
   private searchByTitleAndSubtitle(books: IBook[], value: string) {
     return books.filter((book) => {
       const searchValue = value.toLowerCase();
@@ -50,12 +59,22 @@ export class BooksService {
     });
   }
 
+  private filterByLang(books: IBook[], value: string) {
+    return books.filter((book) => {
+      const success = book.languages.find((e) => e === value);
+      return !!success;
+    });
+  }
+
   getBooks() {
-    const { search } = this.filters;
+    const { search, language } = this.filters;
     let books = this.booksChestService.getBooks();
 
     if (search.length) {
       books = this.searchByTitleAndSubtitle(books, search);
+    }
+    if (language.length) {
+      books = this.filterByLang(books, language);
     }
 
     this.books$.next(books);
