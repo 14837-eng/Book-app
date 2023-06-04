@@ -1,5 +1,10 @@
 <div class="books-list">
   <div class="books-item" *ngFor="let book of books">
-    <app-book-item [book]="book" [mini]="true"></app-book-item>
+    <app-book-item
+      [book]="book"
+      [mini]="true"
+      [actionBtns]="['view', 'edit']"
+      (onActionBtnClick)="onActionClick($event)"
+    ></app-book-item>
   </div>
 </div>

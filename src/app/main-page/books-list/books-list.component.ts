@@ -5,9 +5,11 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReplaySubject, takeUntil } from 'rxjs';
 import { IBook } from 'src/app/core/interfaces/book.interface';
 import { BooksService } from 'src/app/core/services/books.service';
+import { ActionButtonClickPayload } from 'src/app/shared/components/book-item/book-item.component';
 
 @Component({
   selector: 'app-books-list',
@@ -21,6 +23,7 @@ export class BooksListComponent implements OnInit, OnDestroy {
 
   constructor(
     private booksService: BooksService,
+    private router: Router,
     private cd: ChangeDetectorRef
   ) {}
 
@@ -34,6 +37,12 @@ export class BooksListComponent implements OnInit, OnDestroy {
       });
 
     this.booksService.getBooks();
+  }
+
+  onActionClick(event: ActionButtonClickPayload) {
+    if (event.action === 'view') {
+      this.router.navigateByUrl('/book/' + event.book?.id);
+    }
   }
 
   ngOnDestroy(): void {
