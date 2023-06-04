@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./main-page/main-page.module').then((m) => m.MainPageModule),
   },
+  {
+    path: 'book/:id',
+    loadChildren: () =>
+      import('./book-page/book-page.module').then((m) => m.BookPageModule),
+  },
 ];
 
 @NgModule({
