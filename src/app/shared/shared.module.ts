@@ -10,6 +10,7 @@ import { BookFormComponent } from './components/book-form/book-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { AuthorItemComponent } from './components/author-item/author-item.component';
+import { AuthorFormComponent } from './components/author-form/author-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AuthorItemComponent } from './components/author-item/author-item.compon
     SearchComponent,
     BookFormComponent,
     AuthorItemComponent,
+    AuthorFormComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { AuthorItemComponent } from './components/author-item/author-item.compon
     SearchComponent,
     BookFormComponent,
     AuthorItemComponent,
+    AuthorFormComponent,
   ],
 })
 export class SharedModule {}

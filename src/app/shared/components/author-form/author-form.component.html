@@ -1,0 +1,34 @@
+<mat-card class="book-card">
+  <mat-card-header>
+    <mat-card-title>Create Book</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mat-card-content">
+    <form
+      class="author-form"
+      [formGroup]="formGroup"
+      (ngSubmit)="onSubmit($event)"
+    >
+      <div class="author-form-container">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input type="text" matInput formControlName="name" />
+        </mat-form-field>
+      </div>
+      <div class="author-form-container">
+        <mat-form-field>
+          <mat-label>Birth year</mat-label>
+          <input type="number" matInput formControlName="birth_year" />
+        </mat-form-field>
+      </div>
+      <div class="author-form-container">
+        <mat-form-field>
+          <mat-label>Death year</mat-label>
+          <input type="number" matInput formControlName="death_year" />
+        </mat-form-field>
+      </div>
+      <div class="author-form-container">
+        <button mat-raised-button type="submit" color="primary">Save</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
