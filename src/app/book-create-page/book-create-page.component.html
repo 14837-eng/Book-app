@@ -3,6 +3,6 @@
     <button mat-raised-button color="primary" routerLink="/">back</button>
   </div>
   <div class="book-create-page-content">
-    <app-book-form></app-book-form>
+    <app-book-form (onSave)="saveBook($event)"></app-book-form>
   </div>
 </div>
