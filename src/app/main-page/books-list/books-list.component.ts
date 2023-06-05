@@ -42,6 +42,12 @@ export class BooksListComponent implements OnInit, OnDestroy {
   onActionClick(event: ActionButtonClickPayload) {
     if (event.action === 'view') {
       this.router.navigateByUrl('/book/' + event.book?.id);
+    } else if (event.action === 'edit') {
+      this.router.navigate(['/book/' + event.book?.id], {
+        queryParams: {
+          isEdit: true,
+        },
+      });
     }
   }
 
