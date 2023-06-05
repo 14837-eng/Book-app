@@ -1,0 +1,13 @@
+.authors-page {
+  padding: 10px;
+  &-content {
+    display: flex;
+  }
+  &-header {
+    display: flex;
+    &-button {
+      margin: 15px;
+    }
+    margin-bottom: 16px;
+  }
+}

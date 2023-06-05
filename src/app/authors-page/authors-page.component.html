@@ -1,1 +1,10 @@
-<p>authors-page works!</p>
+<div class="authors-page">
+  <div class="authors-page-header">
+    <button mat-raised-button color="primary" [routerLink]="'/authors/create'">
+      Create
+    </button>
+  </div>
+  <div class="authors-page-content">
+    <app-authors-list></app-authors-list>
+  </div>
+</div>
