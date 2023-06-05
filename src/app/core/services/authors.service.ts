@@ -17,8 +17,18 @@ export class AuthorsService {
     this.authors$.next(authorsChestService.getAuthors());
   }
 
-  getAuthors(): IAuthor[] {
-    return this.authors$.getValue();
+  listenAuthors() {
+    return this.authors$.asObservable();
+  }
+
+  getAuthors() {
+    let books = this.authorsChestService.getAuthors();
+
+    this.authors$.next(books);
+  }
+
+  getAuthorsSync(): IAuthor[] {
+    return this.authors$.value;
   }
 
   getAuthorByID(id: number) {

@@ -107,7 +107,7 @@ export class BookFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.authors = this.authorsService.getAuthors();
+    this.authors = this.authorsService.getAuthorsSync();
     this.languages = this.languagesService.getLangs();
     this.genres = this.genresService.getGenres();
 

@@ -29,7 +29,7 @@ export class FilterPanelComponent implements OnInit {
   ngOnInit(): void {
     this.filters = this.booksService.getFilters();
     this.languages = this.languagesService.getLangs();
-    this.authors = this.authorsService.getAuthors();
+    this.authors = this.authorsService.getAuthorsSync();
     this.genres = this.genresService.getGenres();
   }
 
@@ -43,7 +43,10 @@ export class FilterPanelComponent implements OnInit {
     if (!author) {
       this.booksService.setAuthorFilter(-1);
       this.filters.author_id = -1;
-    } else {
+      this.booksService.getBooks();
+      return;
+    }
+    if (author.id) {
       this.booksService.setAuthorFilter(author.id);
       this.filters.author_id = author.id;
     }
