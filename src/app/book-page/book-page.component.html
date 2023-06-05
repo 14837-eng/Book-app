@@ -3,6 +3,21 @@
     <button mat-raised-button color="primary" routerLink="/">back</button>
   </div>
   <div class="book-page-content">
-    <app-book-item [book]="$any(book$ | async)"></app-book-item>
+    <ng-container
+      [ngTemplateOutlet]="isEdit ? bookEditTemplate : bookReadOnlyTemplate"
+    ></ng-container>
   </div>
 </div>
+
+<ng-template #bookReadOnlyTemplate>
+  <app-book-item [book]="$any(book$ | async)"></app-book-item>
+</ng-template>
+
+<ng-template #bookEditTemplate>
+  <ng-container *ngIf="$any(book$ | async) as book">
+    <app-book-form
+      [book]="book"
+      (onSave)="editBook($event, book)"
+    ></app-book-form>
+  </ng-container>
+</ng-template>
