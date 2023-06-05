@@ -1,1 +1,10 @@
-<p>author-create-page works!</p>
+<div class="author-create-page">
+  <div class="author-create-page-nav">
+    <button mat-raised-button color="primary" routerLink="/authors">
+      back
+    </button>
+  </div>
+  <div class="author-create-page-content">
+    <app-author-form (onSave)="saveAuthor($event)"></app-author-form>
+  </div>
+</div>
