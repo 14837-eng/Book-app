@@ -46,6 +46,17 @@
       </div>
       <div class="book-form-container">
         <mat-form-field>
+          <mat-label>Genres</mat-label>
+          <mat-select formControlName="genre">
+            <mat-option (click)="resetGenre()">Отменить</mat-option>
+            <mat-option *ngFor="let genre of genres" [value]="genre">{{
+              genre
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="book-form-container">
+        <mat-form-field>
           <mat-label>Count of page</mat-label>
           <input
             type="number"

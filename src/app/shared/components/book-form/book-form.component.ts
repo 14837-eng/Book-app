@@ -13,6 +13,7 @@ import { Author } from 'src/app/core/models/author.model';
 import { AuthorsService } from 'src/app/core/services/authors.service';
 import { BooksService } from 'src/app/core/services/books.service';
 import { LanguagesService } from 'src/app/core/services/languages.service';
+import { GenresService } from 'src/app/core/services/genres.service';
 
 @Component({
   selector: 'app-book-form',
@@ -27,17 +28,20 @@ export class BookFormComponent implements OnInit {
 
   authors: IAuthor[] = [];
   languages: ILangugage[] = [];
+  genres: string[] = [];
 
   constructor(
     private fb: FormBuilder,
     private languagesService: LanguagesService,
     private authorsService: AuthorsService,
+    private genresService: GenresService,
     private booksService: BooksService
   ) {}
 
   ngOnInit(): void {
     this.authors = this.authorsService.getAuthors();
     this.languages = this.languagesService.getLangs();
+    this.genres = this.genresService.getGenres();
 
     this.formGroup = this.fb.group({
       title: this.fb.control('', [Validators.required]),
@@ -45,7 +49,7 @@ export class BookFormComponent implements OnInit {
       author: this.fb.control(new Author(), [Validators.required]),
       count_of_page: this.fb.control(1, [Validators.required]),
       language: this.fb.control(new Language(), [Validators.required]),
-      // genre: this.fb.control('', [Validators.required]),
+      genre: this.fb.control('', [Validators.required]),
     });
   }
 
@@ -55,6 +59,11 @@ export class BookFormComponent implements OnInit {
 
   resetLang() {
     this.formGroup.get('language')?.setValue(new Language());
+  }
+
+  resetGenre() {
+    this.formGroup.get('genre')?.setValue('');
+    this.formGroup.get('genre')?.setErrors(null);
   }
 
   authorComparisonFunction = function (
