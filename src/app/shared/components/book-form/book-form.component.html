@@ -1,0 +1,22 @@
+<form class="book-form" [formGroup]="formGroup">
+  <div class="book-form-container">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input type="text" matInput formControlName="title" />
+    </mat-form-field>
+  </div>
+  <div class="book-form-container">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <mat-select
+        formControlName="author"
+        [compareWith]="authorComparisonFunction"
+      >
+        <mat-option (click)="resetAuthor()">Отменить</mat-option>
+        <mat-option *ngFor="let author of authors" [value]="author">{{
+          author.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
