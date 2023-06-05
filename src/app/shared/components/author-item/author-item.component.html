@@ -1,0 +1,16 @@
+<mat-card class="author" *ngIf="author">
+  <mat-card-header>
+    <mat-card-title>{{ author.name }}</mat-card-title>
+    <mat-card-subtitle>
+      <span
+        >years of life {{ author.birth_year + "-" + author.death_year }}</span
+      >
+    </mat-card-subtitle>
+  </mat-card-header>
+  <!-- <mat-card-content> </mat-card-content> -->
+  <mat-card-actions>
+    <ng-container *ngFor="let btn of actionBtns">
+      <button mat-button (click)="onClick(btn)">{{ btn }}</button>
+    </ng-container>
+  </mat-card-actions>
+</mat-card>

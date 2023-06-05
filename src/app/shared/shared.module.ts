@@ -9,9 +9,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { AuthorItemComponent } from './components/author-item/author-item.component';
 
 @NgModule({
-  declarations: [BookItemComponent, SearchComponent, BookFormComponent],
+  declarations: [
+    BookItemComponent,
+    SearchComponent,
+    BookFormComponent,
+    AuthorItemComponent,
+  ],
   imports: [
     CommonModule,
     MatCardModule,
@@ -22,6 +28,11 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatFormFieldModule,
   ],
-  exports: [BookItemComponent, SearchComponent, BookFormComponent],
+  exports: [
+    BookItemComponent,
+    SearchComponent,
+    BookFormComponent,
+    AuthorItemComponent,
+  ],
 })
 export class SharedModule {}
