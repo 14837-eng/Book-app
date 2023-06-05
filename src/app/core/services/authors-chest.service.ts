@@ -17,11 +17,11 @@ export class AuthorsChestService {
     this.saveAuthors(authors);
   }
 
-  getauthors() {
+  getAuthors() {
     return this.$authorsChest.value;
   }
 
-  getauthorByID(id: number): Observable<IAuthor> {
+  getAuthorByID(id: number): Observable<IAuthor> {
     return this.$authorsChest.pipe(
       map((authors) => {
         const author = authors.find((b) => b.id === id) as IAuthor;
@@ -30,18 +30,24 @@ export class AuthorsChestService {
     );
   }
 
+  getAuthorByIDSync(id: number) {
+    const authors = this.getAuthors();
+    const findedAuthor = authors.find((a: IAuthor) => a.id === id);
+    return findedAuthor;
+  }
+
   saveAuthors(authors: IAuthor[]) {
     this.$authorsChest.next(authors);
   }
 
   createAuthor(author: IAuthor) {
-    const authors = this.getauthors();
+    const authors = this.getAuthors();
     author.id = authors.length;
     this.saveAuthors([...authors, author]);
   }
 
   editAuthorByID(author_id: number, author: IAuthor) {
-    let authors = this.getauthors();
+    let authors = this.getAuthors();
     authors = authors.map((b) => {
       if (b.id !== author_id) return b;
       return author;
