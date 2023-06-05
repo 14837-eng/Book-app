@@ -4,6 +4,7 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, ReplaySubject, take, takeUntil } from 'rxjs';
 import { IBook } from '../core/interfaces/book.interface';
@@ -27,6 +28,7 @@ export class BookPageComponent implements OnInit, OnDestroy {
   constructor(
     private booksService: BooksService,
     private router: Router,
+    private snackBar: MatSnackBar,
     private route: ActivatedRoute
   ) {}
 
@@ -60,6 +62,11 @@ export class BookPageComponent implements OnInit, OnDestroy {
         number_of_pages: event.count_of_page,
       })
     );
+    this.snackBar.open('success', 'Ok', {
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      duration: 3000,
+    });
     this.router.navigate(['/']);
   }
 
