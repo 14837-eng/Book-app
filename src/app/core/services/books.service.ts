@@ -148,4 +148,9 @@ export class BooksService {
   createBook(book: IBook) {
     this.booksChestService.createBook(book);
   }
+
+  editBookByID(book_id: number, book: IBook) {
+    if (book_id === INVALID_ID || book_id === undefined) return;
+    this.booksChestService.editBookByID(book_id, book);
+  }
 }

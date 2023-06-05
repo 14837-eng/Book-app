@@ -39,4 +39,13 @@ export class BooksChestService {
     book.id = books.length;
     this.saveBooks([...books, book]);
   }
+
+  editBookByID(book_id: number, book: IBook) {
+    let books = this.getBooks();
+    books = books.map((b) => {
+      if (b.id !== book_id) return b;
+      return book;
+    });
+    this.saveBooks(books);
+  }
 }
