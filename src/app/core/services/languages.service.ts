@@ -21,6 +21,11 @@ export class LanguagesService {
     return this.languages$.value;
   }
 
+  getLangByName(name: string) {
+    const langs = this.getLangs();
+    return langs.find((l) => l.name === name);
+  }
+
   saveLangs(langs: ILangugage[]) {
     this.languages$.next(langs);
   }
