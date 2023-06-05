@@ -1,0 +1,12 @@
+$book-margin: 10px;
+
+.authors-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - #{$book-margin * 2});
+  margin: -$book-margin;
+}
+
+.authors-item {
+  margin: $book-margin;
+}
