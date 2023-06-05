@@ -51,7 +51,7 @@ export class FilterPanelComponent implements OnInit {
   }
 
   getAuthorByID(author_id: number) {
-    return this.authorsService.getAuthorByID(author_id);
+    return this.authorsService.getAuthorByIDSync(author_id);
   }
 
   changeGenre(genre: string) {

@@ -24,7 +24,7 @@ export class BooksService {
     return books.map((book) => {
       if (!book.authors.length) return book;
       book.authors = book.authors.map((author: IAuthor) => {
-        const findedAuthor = this.authorsService.getAuthorByID(author.id);
+        const findedAuthor = this.authorsService.getAuthorByIDSync(author.id);
         return findedAuthor !== undefined ? findedAuthor : author;
       });
       return book;
