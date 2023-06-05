@@ -35,8 +35,8 @@ export class BookFormComponent implements OnInit {
 
     this.formGroup = this.fb.group({
       title: this.fb.control('', [Validators.required]),
+      subtitle: this.fb.control('', [Validators.required]),
       author: this.fb.control(new Author(), [Validators.required]),
-      // sutitle: this.fb.control('', [Validators.required]),
       // count_of_page: this.fb.control('', [Validators.required]),
       // language: this.fb.control('', [Validators.required]),
       // genre: this.fb.control('', [Validators.required]),
@@ -44,7 +44,7 @@ export class BookFormComponent implements OnInit {
   }
 
   resetAuthor() {
-      this.formGroup.get('author')?.setValue(new Author());
+    this.formGroup.get('author')?.setValue(new Author());
   }
 
   authorComparisonFunction = function (
