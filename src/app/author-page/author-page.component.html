@@ -1,1 +1,23 @@
-<p>author-page works!</p>
+<div class="author-page">
+  <div class="author-page-nav">
+    <button mat-raised-button color="primary" routerLink="/">back</button>
+  </div>
+  <div class="author-page-content">
+    <ng-container
+      [ngTemplateOutlet]="isEdit ? authorEditTemplate : authorReadOnlyTemplate"
+    ></ng-container>
+  </div>
+</div>
+
+<ng-template #authorReadOnlyTemplate>
+  <!-- TO DO -->
+</ng-template>
+
+<ng-template #authorEditTemplate>
+  <ng-container *ngIf="$any(author$ | async) as author">
+    <app-author-form
+      [author]="author"
+      (onSave)="editAuthor($event, author)"
+    ></app-author-form>
+  </ng-container>
+</ng-template>
