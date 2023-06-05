@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Book } from '../core/models/book.model';
@@ -9,6 +9,7 @@ import { BookFormPayload } from '../shared/components/book-form/book-form.compon
   selector: 'app-book-create-page',
   templateUrl: './book-create-page.component.html',
   styleUrls: ['./book-create-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookCreatePageComponent implements OnInit {
   constructor(
