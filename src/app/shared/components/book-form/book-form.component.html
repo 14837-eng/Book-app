@@ -32,6 +32,20 @@
       </div>
       <div class="book-form-container">
         <mat-form-field>
+          <mat-label>Languages</mat-label>
+          <mat-select
+            formControlName="language"
+            [compareWith]="langComparisonFunction"
+          >
+            <mat-option (click)="resetLang()">Отменить</mat-option>
+            <mat-option *ngFor="let langauge of languages" [value]="langauge">{{
+              langauge.name
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="book-form-container">
+        <mat-form-field>
           <mat-label>Count of page</mat-label>
           <input
             type="number"
