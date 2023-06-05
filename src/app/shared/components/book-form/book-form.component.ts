@@ -1,8 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   Input,
   OnInit,
+  Output,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IAuthor } from 'src/app/core/interfaces/author.interface';
@@ -14,6 +16,7 @@ import { AuthorsService } from 'src/app/core/services/authors.service';
 import { BooksService } from 'src/app/core/services/books.service';
 import { LanguagesService } from 'src/app/core/services/languages.service';
 import { GenresService } from 'src/app/core/services/genres.service';
+import { INVALID_ID } from 'src/app/core/consts/common.consts';
 
 @Component({
   selector: 'app-book-form',
@@ -23,6 +26,8 @@ import { GenresService } from 'src/app/core/services/genres.service';
 })
 export class BookFormComponent implements OnInit {
   @Input() book!: IBook;
+
+  @Output() onSave = new EventEmitter();
 
   formGroup!: FormGroup;
 
@@ -82,5 +87,20 @@ export class BookFormComponent implements OnInit {
 
   getAuthorByID(author_id: number) {
     return this.authorsService.getAuthorByID(author_id);
+  }
+
+  checkFormErrors() {
+    if (this.formGroup.get('author')?.value.id === INVALID_ID) {
+      this.formGroup.get('author')?.setErrors({ incorrect: true });
+    }
+    if (this.formGroup.get('language')?.value.id === INVALID_ID) {
+      this.formGroup.get('language')?.setErrors({ incorrect: true });
+    }
+  }
+
+  onSubmit(event: any) {
+    this.checkFormErrors();
+    if (this.formGroup.invalid) return;
+    this.onSave.next(this.formGroup.value);
   }
 }
