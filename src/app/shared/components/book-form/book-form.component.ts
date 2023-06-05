@@ -37,7 +37,7 @@ export class BookFormComponent implements OnInit {
       title: this.fb.control('', [Validators.required]),
       subtitle: this.fb.control('', [Validators.required]),
       author: this.fb.control(new Author(), [Validators.required]),
-      count_of_page: this.fb.control('', [Validators.required]),
+      count_of_page: this.fb.control(1, [Validators.required]),
       // language: this.fb.control('', [Validators.required]),
       // genre: this.fb.control('', [Validators.required]),
     });
