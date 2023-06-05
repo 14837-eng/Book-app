@@ -18,6 +18,15 @@ import { LanguagesService } from 'src/app/core/services/languages.service';
 import { GenresService } from 'src/app/core/services/genres.service';
 import { INVALID_ID } from 'src/app/core/consts/common.consts';
 
+export interface BookFormPayload {
+  title: string;
+  subtitle: string;
+  author: IAuthor;
+  count_of_page: number;
+  language: ILangugage;
+  genre: string;
+}
+
 @Component({
   selector: 'app-book-form',
   templateUrl: './book-form.component.html',
@@ -27,7 +36,7 @@ import { INVALID_ID } from 'src/app/core/consts/common.consts';
 export class BookFormComponent implements OnInit {
   @Input() book!: IBook;
 
-  @Output() onSave = new EventEmitter();
+  @Output() onSave: EventEmitter<BookFormPayload> = new EventEmitter();
 
   formGroup!: FormGroup;
 
