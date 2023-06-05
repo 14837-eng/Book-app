@@ -4,7 +4,7 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, ReplaySubject, take, takeUntil } from 'rxjs';
 import { IBook } from '../core/interfaces/book.interface';
 import { Book } from '../core/models/book.model';
@@ -26,6 +26,7 @@ export class BookPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private booksService: BooksService,
+    private router: Router,
     private route: ActivatedRoute
   ) {}
 
@@ -59,6 +60,7 @@ export class BookPageComponent implements OnInit, OnDestroy {
         number_of_pages: event.count_of_page,
       })
     );
+    this.router.navigate(['/']);
   }
 
   ngOnDestroy(): void {
