@@ -3,7 +3,6 @@ import { BehaviorSubject, map } from 'rxjs';
 import { INVALID_ID } from '../consts/common.consts';
 import { IAuthor } from '../interfaces/author.interface';
 import { IBook } from '../interfaces/book.interface';
-import { ILangugage } from '../interfaces/languages.interface';
 import { BookFilter } from '../models/books.model';
 import { AuthorsService } from './authors.service';
 import { BooksChestService } from './books-chest.service';
@@ -24,6 +23,7 @@ export class BooksService {
     return books.map((book) => {
       if (!book.authors.length) return book;
       book.authors = book.authors.map((author: IAuthor) => {
+        if (author.id == undefined) return author;
         const findedAuthor = this.authorsService.getAuthorByIDSync(author.id);
         return findedAuthor !== undefined ? findedAuthor : author;
       });

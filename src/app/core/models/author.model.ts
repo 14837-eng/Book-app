@@ -11,6 +11,8 @@ export class Author implements IAuthor {
     this.name = author.name;
     this.birth_year = author.birth_year;
     this.death_year = author.death_year;
-    this.id = author.id;
+    if (author.id) {
+      this.id = author.id;
+    }
   }
 }
