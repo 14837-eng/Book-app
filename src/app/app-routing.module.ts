@@ -9,6 +9,13 @@ const routes: Routes = [
       import('./main-page/main-page.module').then((m) => m.MainPageModule),
   },
   {
+    path: 'book/create',
+    loadChildren: () =>
+      import('./book-create-page/book-create-page.module').then(
+        (m) => m.BookCreatePageModule
+      ),
+  },
+  {
     path: 'book/:id',
     loadChildren: () =>
       import('./book-page/book-page.module').then((m) => m.BookPageModule),
