@@ -1,9 +1,18 @@
 <div class="main-page">
-  <app-search
-    [value]="search"
-    [placeholder]="'Поиск'"
-    (onSearch)="onSearch($event)"
-  ></app-search>
+  <div class="main-page-header">
+    <div class="main-page-header-search">
+      <app-search
+        [value]="search"
+        [placeholder]="'Поиск'"
+        (onSearch)="onSearch($event)"
+      ></app-search>
+    </div>
+    <div class="main-page-header-button">
+      <button mat-raised-button color="primary" [routerLink]="'/book/create'">
+        Create
+      </button>
+    </div>
+  </div>
   <div class="main-page-content">
     <div class="main-page-books">
       <app-books-list></app-books-list>

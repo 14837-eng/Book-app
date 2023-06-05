@@ -9,4 +9,13 @@
   &-filters {
     min-width: 200px;
   }
+  &-header {
+    display: flex;
+    &-search {
+      flex: 1;
+    }
+    &-button {
+      margin: 15px;
+    }
+  }
 }
