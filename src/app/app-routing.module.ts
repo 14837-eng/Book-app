@@ -22,13 +22,26 @@ const routes: Routes = [
   },
   {
     path: 'authors',
+    loadChildren: () =>
+      import('./authors-page/authors-page.module').then(
+        (m) => m.AuthorsPageModule
+      ),
+  },
+  {
+    path: 'author',
     children: [
       {
-        path: '',
-        pathMatch: 'full',
+        path: 'create',
         loadChildren: () =>
-          import('./authors-page/authors-page.module').then(
-            (m) => m.AuthorsPageModule
+          import('./author-create-page/author-create-page.module').then(
+            (m) => m.AuthorCreatePageModule
+          ),
+      },
+      {
+        path: ':id',
+        loadChildren: () =>
+          import('./author-page/author-page.module').then(
+            (m) => m.AuthorPageModule
           ),
       },
     ],
