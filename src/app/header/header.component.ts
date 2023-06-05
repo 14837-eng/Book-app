@@ -23,6 +23,10 @@ export class HeaderComponent implements OnInit {
       name: 'Главная',
       link: '/',
     },
+    {
+      name: 'Авторы',
+      link: '/authors',
+    },
   ];
 
   appName = '';

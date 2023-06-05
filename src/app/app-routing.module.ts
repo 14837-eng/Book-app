@@ -20,6 +20,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./book-page/book-page.module').then((m) => m.BookPageModule),
   },
+  {
+    path: 'authors',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        loadChildren: () =>
+          import('./authors-page/authors-page.module').then(
+            (m) => m.AuthorsPageModule
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({
