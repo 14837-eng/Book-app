@@ -2,7 +2,7 @@
   <div class="authors-item" *ngFor="let author of authors">
     <app-author-item
       [author]="author"
-      [actionBtns]="['view', 'edit']"
+      [actionBtns]="['edit']"
       (onActionBtnClick)="onActionClick($event)"
     ></app-author-item>
   </div>

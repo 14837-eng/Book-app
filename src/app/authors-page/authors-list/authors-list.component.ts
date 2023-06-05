@@ -21,9 +21,7 @@ export class AuthorsListComponent implements OnInit {
   }
 
   onActionClick(event: ActionButtonClickPayload) {
-    if (event.action === 'view') {
-      this.router.navigateByUrl('/author/' + event.author?.id);
-    } else if (event.action === 'edit') {
+    if (event.action === 'edit') {
       this.router.navigate(['/author/' + event.author?.id], {
         queryParams: {
           isEdit: true,
