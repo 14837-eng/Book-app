@@ -144,4 +144,8 @@ export class BooksService {
   getBookByID(id: number) {
     return this.booksChestService.getBookByID(id);
   }
+
+  createBook(book: IBook) {
+    this.booksChestService.createBook(book);
+  }
 }

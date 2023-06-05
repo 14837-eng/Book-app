@@ -33,4 +33,10 @@ export class BooksChestService {
   saveBooks(books: IBook[]) {
     this.$booksChest.next(books);
   }
+
+  createBook(book: IBook) {
+    const books = this.getBooks();
+    book.id = books.length;
+    this.saveBooks([...books, book]);
+  }
 }
