@@ -1,19 +1,20 @@
 import { IAuthor } from './author.interface';
 
 export interface IBook {
-  id: number;
+  id?: number;
   title: string;
   subtitle: string;
   authors: IAuthor[];
-  translators: any[];
-  number_of_pages: number;
-  subjects: string[];
-  bookshelves: string[];
   languages: string[];
-  copyright: boolean;
-  media_type: string;
-  formats: string[];
-  download_count: number;
+  bookshelves: string[];
+  number_of_pages: number;
+
+  translators?: any[];
+  subjects?: string[];
+  copyright?: boolean;
+  media_type?: string;
+  formats?: string[];
+  download_count?: number;
 }
 
 export interface IBookFilter {
