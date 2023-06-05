@@ -48,15 +48,19 @@ export class BookFormComponent implements OnInit {
     private fb: FormBuilder,
     private languagesService: LanguagesService,
     private authorsService: AuthorsService,
-    private genresService: GenresService,
-    private booksService: BooksService
+    private genresService: GenresService
   ) {}
 
-  ngOnInit(): void {
-    this.authors = this.authorsService.getAuthors();
-    this.languages = this.languagesService.getLangs();
-    this.genres = this.genresService.getGenres();
+  getLanguageByStr(lang: string) {
+    let language = new Language();
+    const findedLang = this.languagesService.getLangByName(lang);
+    if (findedLang != undefined) {
+      language = new Language(findedLang);
+    }
+    return language;
+  }
 
+  formGroupInitWithoutBookData() {
     this.formGroup = this.fb.group({
       title: this.fb.control('', [Validators.required]),
       subtitle: this.fb.control('', [Validators.required]),
@@ -65,6 +69,49 @@ export class BookFormComponent implements OnInit {
       language: this.fb.control(new Language(), [Validators.required]),
       genre: this.fb.control('', [Validators.required]),
     });
+  }
+
+  formGroupInitByBook() {
+    const {
+      title,
+      subtitle,
+      number_of_pages,
+      authors,
+      languages,
+      bookshelves,
+    } = this.book;
+    let author = new Author(authors[0]);
+    let language = this.getLanguageByStr(languages[0]);
+    let genre = bookshelves[0];
+
+    this.formGroup = this.fb.group({
+      title: this.fb.control(title?.length ? title : '', [Validators.required]),
+      subtitle: this.fb.control(subtitle?.length ? subtitle : '', [
+        Validators.required,
+      ]),
+      author: this.fb.control(author, [Validators.required]),
+      count_of_page: this.fb.control(number_of_pages ? number_of_pages : 1, [
+        Validators.required,
+      ]),
+      language: this.fb.control(language, [Validators.required]),
+      genre: this.fb.control(genre, [Validators.required]),
+    });
+  }
+
+  formGroupInit() {
+    if (!this.book) {
+      this.formGroupInitWithoutBookData();
+      return;
+    }
+    this.formGroupInitByBook();
+  }
+
+  ngOnInit(): void {
+    this.authors = this.authorsService.getAuthors();
+    this.languages = this.languagesService.getLangs();
+    this.genres = this.genresService.getGenres();
+
+    this.formGroupInit();
   }
 
   resetAuthor() {
