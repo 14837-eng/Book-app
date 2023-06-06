@@ -9,6 +9,6 @@ describe('Application tabs', () => {
   });
 
   it('should be a header', () => {
-    cy.get('app-header').should('have.length', 3);
+    cy.get('app-header').should('have.length', 1);
   });
 });
