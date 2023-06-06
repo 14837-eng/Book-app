@@ -5,6 +5,9 @@
     </button>
   </div>
   <div class="author-create-page-content">
-    <app-author-form (onSave)="saveAuthor($event)"></app-author-form>
+    <app-author-form
+      [title]="'Create Author'"
+      (onSave)="saveAuthor($event)"
+    ></app-author-form>
   </div>
 </div>

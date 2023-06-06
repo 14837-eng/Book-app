@@ -23,6 +23,7 @@ export interface AuthorFormPayload {
 })
 export class AuthorFormComponent implements OnInit {
   @Input() author!: IAuthor;
+  @Input() title = '';
 
   @Output() onSave: EventEmitter<AuthorFormPayload> = new EventEmitter();
 

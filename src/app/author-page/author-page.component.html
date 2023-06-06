@@ -17,6 +17,7 @@
   <ng-container *ngIf="$any(author$ | async) as author">
     <app-author-form
       [author]="author"
+      [title]="'Author edit'"
       (onSave)="editAuthor($event, author)"
     ></app-author-form>
   </ng-container>
