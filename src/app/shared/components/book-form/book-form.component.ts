@@ -35,6 +35,7 @@ export interface BookFormPayload {
 })
 export class BookFormComponent implements OnInit {
   @Input() book!: IBook;
+  @Input() title = '';
 
   @Output() onSave: EventEmitter<BookFormPayload> = new EventEmitter();
 

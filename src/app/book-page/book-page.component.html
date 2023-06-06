@@ -16,6 +16,7 @@
 <ng-template #bookEditTemplate>
   <ng-container *ngIf="$any(book$ | async) as book">
     <app-book-form
+      [title]="'Book edit'"
       [book]="book"
       (onSave)="editBook($event, book)"
     ></app-book-form>
